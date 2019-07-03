@@ -1,5 +1,5 @@
 
-🚀 React Native Boilerplate - May 2018
+🚀 React Native Boilerplate And Code format - July 2019
 =======================================
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.55-blue.svg)](https://facebook.github.io/react-native/)
