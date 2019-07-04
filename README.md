@@ -31,8 +31,8 @@ and redux persist. Latest version of react-navigation (3.11.0).
 3. Remove `.git` folder,  `rm -rf .git`
 4. Open `package.json` and change the `name` property with your project name
 5. Run `yarn` or `npm install` to install dependencies
-6. Remove android contents `rm -rf /android/*`
-7. Remove ios contents `rm -rf /ios/*`
+6. Remove android contents `rm -rf android`
+7. Remove ios contents `rm -rf ios`
 8. Open `app.json` and change the `name` and `displayName` property with your project name
 9. Run `react-native eject` to update the project name to `android` and `ios` 
 10. Run `react-native link`
