@@ -35,11 +35,11 @@ and redux persist. Latest version of react-navigation (3.11.0).
 7. Remove ios contents `rm -rf /ios/*`
 8. Open `app.json` and change the `name` and `displayName` property with your project name
 9. Run `react-native eject` to update the project name to `android` and `ios` 
-10.Run `react-native link`
-11.Open `index.js` and replace `'ReactNativeBoilerPlate'` by your project name
-12.Start the packager with `npm start`
-13.Connect a mobile device to your development machine
-14.Run the test application:
+10. Run `react-native link`
+11. Open `index.js` and replace `'ReactNativeBoilerPlate'` by your project name
+12. Start the packager with `npm start`
+13. Connect a mobile device to your development machine
+14. Run the test application:
   * On Android:
     * Run `react-native run-android`
   * On iOS:
