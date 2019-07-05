@@ -1,4 +1,0 @@
-#Wed Jul 03 17:36:03 IST 2019
-base.0=/Users/jebin/Desktop/PROJECTS/Boilerplate/react-native-boilerplate-master/android/app/build/intermediates/dex/debug/mergeDexDebug/out
-path.0=classes.dex
-renamed.0=classes.dex
