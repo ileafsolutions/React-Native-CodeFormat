@@ -1,28 +1,34 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * api - App fetch API class.(All network fetches are held on here)
- */
-
-import ApiConstants from "./ApiConstants";
-
-export function api(path, params, method, token) {
+// General api to acces data from web
+import ApiConstants from './ApiConstants';
+export default function api(path, params, method, sssid, VLenzaToken) {
   let options;
-  options = {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      ...(token && { token: token })
-    },
-    method: method,
-    ...(params && { body: JSON.stringify(params) })
-  };
-  return new Promise((resolve, reject) => {
-    fetch(ApiConstants.BASE_URL + path, options)
-      .then(response => {
-        return response.json();
-      })
-      .then(jsonResponse => resolve(jsonResponse))
-      .catch(error => reject(error));
-  });
+  sssid
+    ? (options = Object.assign(
+        {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            API_KEY: 'VLenzaToken',
+            sssid: sssid,
+          },
+        },
+        {method: method},
+        params ? {body: JSON.stringify(params)} : null,
+      ))
+    : (options = Object.assign(
+        {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            API_KEY: 'VLenzaToken',
+            VLenzaToken: VLenzaToken,
+          },
+        },
+        {method: method},
+        params ? {body: JSON.stringify(params)} : null,
+      ));
+  return fetch(ApiConstants.BASE_URL + path, options)
+    .then(resp => resp.json())
+    .then(json => json)
+    .catch(error => error);
 }

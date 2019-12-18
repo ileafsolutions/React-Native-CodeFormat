@@ -1,12 +1,6 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * AppNavigator - Navigation index.
- */
-
-import React, { Component } from "react";
-import NavigationStack from "./NavigationStack";
-import NavigationService from "./NavigationService";
+import React, {Component} from 'react';
+import NavigationStack from './navigationStack';
+import NavigationService from './navigationService';
 
 class AppNavigator extends Component {
   render() {

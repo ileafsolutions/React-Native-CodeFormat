@@ -1,10 +1,4 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * NavigationService - Navigation services.
- */
-
-import { NavigationActions } from "react-navigation";
+import {NavigationActions} from 'react-navigation';
 
 let _navigator;
 
@@ -16,21 +10,21 @@ function navigate(routeName, params) {
   _navigator.dispatch(
     NavigationActions.navigate({
       routeName,
-      params
-    })
+      params,
+    }),
   );
 }
 
 function goBack(key) {
   _navigator.dispatch(
     NavigationActions.back({
-      key: key
-    })
+      key: key,
+    }),
   );
 }
 
 export default {
   navigate,
   goBack,
-  setTopLevelNavigator
+  setTopLevelNavigator,
 };

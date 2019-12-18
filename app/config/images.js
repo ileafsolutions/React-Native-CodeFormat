@@ -1,18 +1,9 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * Images - App images and icons path.
+/* App config for images
  */
-
 const images = {
-  icons: {
-    // menu: require("../assets/images/menu.png"),
-    //Other icons...
-  },
-  images: {
-    // intro1: require("../assets/images/intro1.png"),
-    //Other images...
-  }
+  // login: {
+  //   logo: require('../assets/images/login/logo.png'),
+  // },
 };
 
 export default images;

@@ -1,6 +1,6 @@
-//loaders
-export const LOGIN_ENABLE_LOADER = 'ENABLE_LOADER';
-export const LOGIN_DISABLE_LOADER = 'DISABLE_LOADER';
+/**
+ * Action Types - differnt action types used.
+ */
 
 // login
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';

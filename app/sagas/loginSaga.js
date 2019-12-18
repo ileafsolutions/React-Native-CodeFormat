@@ -1,38 +1,46 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * LoginSaga - Handles login saga methods.
- */
+// /* Redux saga class
+//  * logins the user into the app
+//  * requires username and password.
+//  */
+// import {put, call, select} from 'redux-saga/effects';
+// import Snackbar from 'react-native-snackbar';
+// import loginUser from '../api/methods/loginUser';
+// import * as loginActions from '../actions/loginActions';
+// import * as navigationActions from '../actions/navigationActions';
 
-// import Strings from "../config/stringFile";
-// import * as common from "../config/common";
-// import { loginUser } from "../api/apiMethods";
-// import { put, call, select } from "redux-saga/effects";
-// import * as loginActions from "../actions/loginActions";
-// import * as loadingActions from "../actions/loadingActions";
-// import * as navigationActions from "../actions/navigationActions";
+// //selector Function used to access reducer states
+// export const getNetworkState = state => {
+//   return {};
+// };
 
-export default function* loginSaga(actions) {
-  //   const { isNetworkAvailable } = yield select(state => state.appReducer);
-  //   if (!isNetworkAvailable) {
-  //     common.showSingleAlert(Strings.NO_INTERNET_CONNECTION);
-  //     return;
-  //   }
-  //   yield put(loadingActions.enableLoader());
-  //   try {
-  //     let response = yield call(loginUser, actions.username, actions.password);
-  //     console.log("RESPONSE ==", response);
-  //     yield put(loadingActions.disableLoader({}));
-  //     if (response.status) {
-  //       common.showSnackBarErrorAlert(Strings.LOGIN_FAILD);
-  //       yield call(navigationActions.navigateToLogin);
-  //     } else {
-  //       yield put(loginActions.onLoginResponse(response));
-  //       yield call(navigationActions.navigateToHome);
-  //     }
-  //   } catch (e) {
-  //     console.log("ERRORR!!!!", e);
-  //     yield put(loadingActions.disableLoader({}));
-  //     common.showSnackBarErrorAlert(Strings.API_FAILED);
-  //   }
-}
+// // Our worker Saga that logins the user
+// export default function* loginAsync(action) {
+//   yield put(loginActions.enableLoader());
+//   try {
+//     const response = yield call(loginUser, action.username, action.password);
+
+//     if (response.success) {
+//       yield put(loginActions.onLoginResponse(response.data));
+//       setTimeout(() => {
+//         Snackbar.show({
+//           title: 'You Have Successfully Logged In',
+//           duration: Snackbar.LENGTH_SHORT,
+//         });
+//       }, 200);
+//       yield call(navigationActions.navigateToHomeScreen);
+//       yield put(loginActions.disableLoader({}));
+//     } else {
+//       yield put(loginActions.loginFailed());
+//       yield put(loginActions.disableLoader({}));
+//       setTimeout(() => {
+//         Snackbar.show({
+//           title: response.Message,
+//           duration: Snackbar.LENGTH_SHORT,
+//         });
+//       }, 200);
+//     }
+//   } catch (error) {
+//     yield put(loginActions.loginFailed());
+//     yield put(loginActions.disableLoader({}));
+//   }
+// }

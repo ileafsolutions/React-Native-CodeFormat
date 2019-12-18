@@ -1,49 +1,35 @@
-/**
- * Created by ILeaf solutions
- * on July 03, 2019
- * LoginReducer - Handles login states in the app.
+/* Login Reducer
+ * handles login states in the app
  */
-
-import * as types from "../actions/types";
-import createReducer from "../lib/createReducer";
+import createReducer from '../lib/createReducer';
+import * as types from '../actions/types';
 
 const initialState = {
-  isLoggedIn: false,
-  accessToken: "",
-  username: "",
-  password: ""
+  token: '',
 };
 
 export const loginReducer = createReducer(initialState, {
-  [types.LOGIN_REQUEST](state, action) {
+  [types.LOGIN_REQUEST](state) {
     return {
       ...state,
-      username: action.username,
-      password: action.password
     };
   },
   [types.LOGIN_RESPONSE](state, action) {
     return {
       ...state,
-      accessToken: action.accessToken,
-      isLoggedIn: true
+      token: action.response.UserToken,
     };
   },
   [types.LOGIN_FAILED](state) {
     return {
       ...state,
-      username: "",
-      password: "",
-      isLoggedIn: false
+      token: '',
     };
   },
-  [types.LOGIN_RESET](state) {
+  [types.USER_LOGOUT](state) {
     return {
       ...state,
-      username: "",
-      password: "",
-      isLoggedIn: false,
-      accessToken: ""
+      token: '',
     };
-  }
+  },
 });
