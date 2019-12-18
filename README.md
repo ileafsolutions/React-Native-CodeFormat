@@ -31,20 +31,15 @@ and redux persist. Latest version of react-navigation (v4.0.10).
 3. Remove `.git` folder,  `rm -rf .git`
 4. Open `package.json` and change the `name` property with your project name
 5. Run `yarn` or `npm install` to install dependencies
-6. Remove android contents `rm -rf android`
-7. Remove ios contents `rm -rf ios`
-8. Open `app.json` and change the `name` and `displayName` property with your project name
-9. Run `react-native eject` to update the project name to `android` and `ios` 
-10. Open `index.js` and replace `'ReactNativeBoilerPlate'` by your project name
-11. Start the packager with `npm start`
-12. Connect a mobile device to your development machine
-13. Run the test application:
+6. Start the packager with `npm start`
+7. Connect a mobile device to your development machine
+8. Run the test application:
   * On Android:
     * Run `react-native run-android`
   * On iOS:
     * Open `ios/YourReacTproject.xcodeproj` in Xcode
     * Hit `Run` after selecting the desired device
-14. Enjoy!!!
+9. Enjoy!!!
 
 
 ## Contributing
