@@ -4,12 +4,12 @@
  * Purely functional - redux integration removed in favour of performance
  */
 
-import NavigationService from '../navigation/navigationService';
+import NavigationService from "../navigation/NavigationService";
 
 export function navigateToHomeScreen(params) {
-  NavigationService.navigate('HomeScreen', params);
+  NavigationService.navigate("HomeScreen", params);
 }
 
 export function navigateToLoginScreen(params) {
-  NavigationService.navigate('LoginScreen', params);
+  NavigationService.navigate("LoginScreen", params);
 }

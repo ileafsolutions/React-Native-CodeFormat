@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import NavigationStack from './navigationStack';
-import NavigationService from './navigationService';
+import React, { Component } from "react";
+import NavigationStack from "./NavigationStack";
+import NavigationService from "./NavigationService";
 
 class AppNavigator extends Component {
   render() {
