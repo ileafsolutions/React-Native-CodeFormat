@@ -1,5 +1,5 @@
 
-🚀 React Native Boilerplate And Code format - July 2019
+🚀 React Native Boilerplate And Code format - December 2019
 =======================================
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.55-blue.svg)](https://facebook.github.io/react-native/)
@@ -7,7 +7,7 @@
 
 
 React Native Boilerplate is a starting point for React Native application. This project is configured with redux, redux saga 
-and redux persist. Latest version of react-navigation (3.11.0).
+and redux persist. Latest version of react-navigation (v4.0.10).
 
 ## Features
 
@@ -20,7 +20,7 @@ and redux persist. Latest version of react-navigation (3.11.0).
 
 ## Prerequisites
 
-* [Node](https://nodejs.org) v6.10 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
+* [Node](https://nodejs.org) v12.1.0 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
 * [Yarn](https://yarnpkg.com/)
 * A development machine set up for React Native by following [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
 
