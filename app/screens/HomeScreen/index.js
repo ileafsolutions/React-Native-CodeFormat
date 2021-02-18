@@ -1,25 +1,19 @@
-import React, {Component} from 'react';
-import HomeScreen from './HomeScreen';
-import {connect} from 'react-redux';
-import * as navigationActiona from '../../actions/navigationActions';
+import React, { Component } from "react";
+import { View, SafeAreaView } from "react-native";
+import styles from "./styles";
+import NavigationHeader from "../../components/NavigationHeader/NavigationHeader";
 
-class HomeScreenContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default function HomeScreen(props) {
+  const drawerPress = () => {
+    props.navigation.openDrawer();
+  };
 
-  render() {
-    return <HomeScreen {...this.props} />;
-  }
+  return (
+    <SafeAreaView style={styles.safeContainer}>
+      <View style={styles.safeContainer}>
+        <NavigationHeader title={"HOME"} drawerPress={drawerPress} />
+        <View style={styles.container} />
+      </View>
+    </SafeAreaView>
+  );
 }
-
-function mapStateToProps() {
-  return {};
-}
-function mapDispatchToProps() {
-  return {};
-}
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(HomeScreenContainer);

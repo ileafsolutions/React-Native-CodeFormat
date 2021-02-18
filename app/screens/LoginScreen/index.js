@@ -1,29 +1,26 @@
-import React, {Component} from 'react';
-import LoginScreen from './LoginScreen';
-import {connect} from 'react-redux';
-import * as navigationActions from '../../actions/navigationActions';
+import React, { Component } from "react";
+import {
+  View,
+  SafeAreaView,
+  StatusBar,
+  TouchableOpacity,
+  Text,
+} from "react-native";
+import styles from "./styles";
 
-class LoginContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return <LoginScreen {...this.props} />;
-  }
-}
-
-function mapStateToProps() {
-  return {};
-}
-function mapDispatchToProps() {
-  return {
-    navigateToHomeScreen: () => {
-      navigationActions.navigateToHomeScreen;
-    },
+export default function LoginScreen(props) {
+  const onPress = () => {
+    props.navigation.navigate("DrawerStack");
   };
+
+  return (
+    <SafeAreaView style={styles.safeContainer}>
+      <StatusBar backgroundColor="#005776" barStyle="light-content" />
+      <View style={styles.container}>
+        <TouchableOpacity onPress={onPress}>
+          <Text>Navigate To Home Page</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(LoginContainer);
